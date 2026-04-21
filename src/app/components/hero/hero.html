@@ -1,0 +1,95 @@
+<section class="relative min-h-[90vh] flex items-center justify-center pt-24 overflow-hidden">
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-6 text-center lg:text-left flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-8 w-full">
+    
+    <!-- Hero Text -->
+    <div class="flex-1 space-y-8" appScrollReveal="reveal-left">
+      <div class="space-y-6">
+        <p class="inline-block px-4 py-1.5 rounded-full glass border border-cyan-500/30 text-cyan-500 dark:text-cyan-400 font-semibold tracking-wide text-xs md:text-sm uppercase shadow-glow mb-4">
+          Backend-Focused Software Engineer | Microservices | Banking Domain Specialist
+        </p>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-slate-800 dark:text-white tracking-tight leading-[1.1]">
+          Hi, I am <br/>
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600 dark:from-cyan-400 dark:via-blue-500 dark:to-purple-500 text-glow-cyan drop-shadow-sm">Ashif Saheer T</span>
+        </h1>
+      </div>
+      
+      <p class="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
+        I build <span class="text-slate-900 dark:text-white font-semibold">scalable</span>, <span class="text-purple-600 dark:text-purple-400 font-semibold">secure</span>, and <span class="text-cyan-600 dark:text-cyan-400 font-semibold">high-performance</span> enterprise systems using Java, Spring Boot, and Angular.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+        <!-- View Projects -->
+        <button (click)="scrollTo('projects')" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-slate-800 dark:text-white font-bold tracking-wide hover:bg-slate-100 dark:hover:bg-white/5 border border-slate-300 dark:border-white/20 transform hover:-translate-y-1 transition-all duration-300">
+          View Projects
+        </button>
+
+        <!-- View Resume -->
+        <a href="resume.pdf" target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-cyan-500 dark:to-blue-600 text-white font-bold tracking-wide hover:shadow-[0_0_20px_rgba(6,182,212,0.5)] transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+          View Resume
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+        </a>
+
+        <!-- Download Resume -->
+        <a href="resume.pdf" download="Ashif_Saheer_Resume.pdf" class="w-full sm:w-auto px-6 py-3.5 rounded-xl glass-card text-slate-800 dark:text-white font-bold tracking-wide hover:bg-cyan-50 dark:hover:bg-cyan-900/20 border-cyan-500/20 transform hover:-translate-y-1 transition-all duration-300 group flex items-center justify-center gap-2">
+          Download PDF
+          <svg class="w-5 h-5 text-cyan-600 dark:text-cyan-400 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Side: Abstract Microservices SVG Animation -->
+    <div class="flex-1 w-full flex justify-center lg:justify-end" appScrollReveal="reveal-right">
+      <div class="relative w-full max-w-lg aspect-square">
+        <!-- Connecting Lines (Paths) -->
+        <svg class="absolute inset-0 w-full h-full animate-[spin_100s_linear_infinite]" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="200" r="140" stroke="currentColor" stroke-dasharray="8 8" class="text-slate-200 dark:text-white/10" stroke-width="1.5" />
+          <circle cx="200" cy="200" r="90" stroke="currentColor" stroke-dasharray="4 8" class="text-slate-200 dark:text-white/10" stroke-width="1" />
+          
+          <!-- Animated Data Flow Lines -->
+          <circle cx="200" cy="200" r="140" stroke="url(#cyan-glow)" stroke-width="3" stroke-dasharray="100 800" stroke-linecap="round" class="animate-[spin_4s_linear_infinite]" />
+          <circle cx="200" cy="200" r="90" stroke="url(#purple-glow)" stroke-width="2" stroke-dasharray="50 500" stroke-linecap="round" class="animate-[spin_3s_linear_infinite_reverse]" />
+          
+          <defs>
+            <linearGradient id="cyan-glow" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#06b6d4" />
+              <stop offset="1" stop-color="transparent" />
+            </linearGradient>
+            <linearGradient id="purple-glow" x1="400" y1="0" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#a855f7" />
+              <stop offset="1" stop-color="transparent" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <!-- Nodes -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 glass-card rounded-2xl flex items-center justify-center shadow-glow border-cyan-500/50 z-20">
+          <svg class="w-12 h-12 text-cyan-600 dark:text-cyan-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+        </div>
+
+        <!-- Node 1 -->
+        <div class="absolute top-[5%] left-[25%] w-16 h-16 glass-card rounded-xl flex items-center justify-center animate-bounce z-20" style="animation-duration: 3s">
+          <span class="font-bold text-slate-800 dark:text-white text-xs">Auth</span>
+        </div>
+        <!-- Node 2 -->
+        <div class="absolute top-[25%] right-[5%] w-20 h-20 glass-card rounded-full flex items-center justify-center border-purple-500/30 animate-pulse z-20" style="animation-duration: 4s">
+          <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+        <!-- Node 3 -->
+        <div class="absolute bottom-[20%] right-[15%] w-16 h-16 glass-card rounded-xl flex items-center justify-center animate-bounce z-20" style="animation-duration: 3.5s; animation-delay: 1s">
+          <span class="font-bold text-slate-800 dark:text-white text-xs">Kafka</span>
+        </div>
+        <!-- Node 4 -->
+        <div class="absolute bottom-[5%] left-[20%] w-20 h-20 glass-card rounded-full flex items-center justify-center border-blue-500/30 animate-pulse z-20" style="animation-duration: 5s">
+          <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+        </div>
+        <!-- Node 5 -->
+        <div class="absolute top-[40%] left-[0%] w-14 h-14 glass-card rounded-xl flex items-center justify-center z-20 animate-[spin_10s_linear_infinite]">
+          <span class="font-bold text-slate-800 dark:text-white text-[10px]">gRPC</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
