@@ -1,175 +1,72 @@
-<section class="py-32 relative">
-  <!-- Interactive background gradients -->
-  <div class="absolute right-0 top-1/2 w-1/3 h-1/2 bg-blue-500/5 dark:bg-blue-500/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none"></div>
-
+<section class="py-24 md:py-32 relative border-t border-slate-200 dark:border-zinc-800">
   <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-    
-    <div class="mb-20 text-center" appScrollReveal="reveal-up">
-      <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-white tracking-tight">Technical <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-400">Arsenal</span></h2>
-      <div class="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-cyan-500 mt-6 mx-auto rounded-full"></div>
+
+    <div class="mb-20" appScrollReveal="reveal-up">
+      <h2 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-slate-100 uppercase tracking-tighter">
+        Technical <span class="text-accent">Toolkit.</span>
+      </h2>
     </div>
 
-    <!-- Skills Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <!-- Asymmetric / Notes-like Layout (De-optimized) -->
+    <div class="flex flex-col md:flex-row flex-wrap gap-x-16 gap-y-20 items-start">
 
-      <!-- Languages & Frameworks -->
-      <div class="glass-card rounded-3xl p-8 lg:p-10 group" appScrollReveal="reveal-left">
-        <div class="flex items-center gap-4 mb-10">
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-500/20 dark:to-cyan-500/20 flex items-center justify-center border border-blue-200 dark:border-blue-500/30 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-            <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-          </div>
-          <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Core Development</h3>
-        </div>
-
-        <div class="space-y-6">
-          <!-- Skill Items -->
-          <div class="relative">
-            <div class="flex justify-between mb-2">
-              <span class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2"><span class="text-blue-600 dark:text-blue-400">☕</span> Java / Spring Boot</span>
-              <span class="text-sm font-bold text-cyan-600 dark:text-cyan-400">95%</span>
-            </div>
-            <div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
-              <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full group-hover:shadow-glow transition-all duration-1000 w-[95%] relative">
-                <div class="absolute top-0 right-0 bottom-0 left-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.2)_25%,rgba(255,255,255,.2)_50%,transparent_50%,transparent_75%,rgba(255,255,255,.2)_75%,rgba(255,255,255,.2)_100%)] bg-[length:1rem_1rem] animate-[progress_1s_linear_infinite]"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative">
-            <div class="flex justify-between mb-2">
-              <span class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2"><span class="text-red-500 text-lg">🅰️</span> Angular</span>
-              <span class="text-sm font-bold text-cyan-600 dark:text-cyan-400">85%</span>
-            </div>
-            <div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
-              <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full group-hover:shadow-glow transition-all duration-1000 w-[85%] relative"></div>
-            </div>
-          </div>
-
-          <div class="relative">
-            <div class="flex justify-between mb-2">
-              <span class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2"><span class="text-green-600 text-lg">🐍</span> Python</span>
-              <span class="text-sm font-bold text-cyan-600 dark:text-cyan-400">75%</span>
-            </div>
-            <div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
-              <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full group-hover:shadow-glow transition-all duration-1000 w-[75%] relative"></div>
-            </div>
-          </div>
-
-          <div class="relative">
-            <div class="flex justify-between mb-2">
-              <span class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2"><span class="text-slate-500 text-lg">💾</span> SQL / JPA / Hibernate</span>
-              <span class="text-sm font-bold text-cyan-600 dark:text-cyan-400">90%</span>
-            </div>
-            <div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
-              <div class="h-full bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full group-hover:shadow-glow transition-all duration-1000 w-[90%] relative"></div>
+      <!-- Core Engineering -->
+      <div class="flex flex-col gap-6" style="flex: 1 1 300px;" appScrollReveal="reveal-left">
+        <h3
+          class="font-mono text-sm tracking-widest text-slate-900 dark:text-slate-100 border-b-2 border-slate-900 dark:border-white pb-3 font-bold uppercase">
+          {{ dataService.skills.core.title }}
+        </h3>
+        <div class="text-slate-800 dark:text-slate-200 font-medium space-y-6 font-mono text-sm md:text-base mt-2">
+          <div class="flex items-start" *ngFor="let item of dataService.skills.core.items">
+            <span class="text-accent mr-3 mt-1 text-xs">/</span>
+            <div>
+              <span class="block text-xl font-black font-sans uppercase tracking-tight">{{ item.name }}</span>
+              <span class="text-slate-500 dark:text-zinc-500 text-[11px] uppercase tracking-widest">{{ item.level
+                }}</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Architecture & APIs -->
-      <div class="glass-card rounded-3xl p-8 lg:p-10 group" appScrollReveal="reveal-right">
-        <div class="flex items-center gap-4 mb-10">
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-500/20 dark:to-pink-500/20 flex items-center justify-center border border-purple-200 dark:border-purple-500/30 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-            <svg class="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
-          </div>
-          <h3 class="text-2xl font-bold text-slate-800 dark:text-white">APIs & Microservices</h3>
-        </div>
+      <!-- Architecture & Integration -->
+      <div class="flex flex-col gap-5 lg:mt-12" style="flex: 1 1 250px;" appScrollReveal="reveal-up">
+        <h3
+          class="font-mono text-[13px] lowercase tracking-widest text-slate-500 dark:text-zinc-500 border-b border-dashed border-slate-300 dark:border-zinc-700 pb-2">
+          {{ dataService.skills.architecture.title }}
+        </h3>
+        <ul class="text-slate-800 dark:text-slate-200 font-medium space-y-4 font-mono text-[15px] pt-2">
+          <li *ngFor="let item of dataService.skills.architecture.items"><span
+              class="text-accent opacity-80 mr-2">></span> {{ item.name }}</li>
+        </ul>
+      </div>
 
-        <div class="space-y-6">
-          <!-- Skill Items -->
-          <div class="relative">
-            <div class="flex justify-between mb-2">
-              <span class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2"><span class="text-purple-600 dark:text-purple-400 text-lg">🔌</span> REST APIs & gRPC</span>
-              <span class="text-sm font-bold text-purple-600 dark:text-purple-400">95%</span>
-            </div>
-            <div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
-              <div class="h-full bg-gradient-to-r from-purple-600 to-pink-500 rounded-full group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all duration-1000 w-[95%] relative">
-                <div class="absolute top-0 right-0 bottom-0 left-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.2)_25%,rgba(255,255,255,.2)_50%,transparent_50%,transparent_75%,rgba(255,255,255,.2)_75%,rgba(255,255,255,.2)_100%)] bg-[length:1rem_1rem] animate-[progress_1s_linear_infinite]"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="relative">
-            <div class="flex justify-between mb-2">
-              <span class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2"><span class="text-slate-500 text-lg">📦</span> Microservices Architecture</span>
-              <span class="text-sm font-bold text-purple-600 dark:text-purple-400">90%</span>
-            </div>
-            <div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
-              <div class="h-full bg-gradient-to-r from-purple-600 to-pink-500 rounded-full group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all duration-1000 w-[90%] relative"></div>
-            </div>
-          </div>
-
-          <div class="relative">
-            <div class="flex justify-between mb-2">
-              <span class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2"><span class="text-yellow-600 text-lg">🔒</span> OAuth2 / JWT Security</span>
-              <span class="text-sm font-bold text-purple-600 dark:text-purple-400">85%</span>
-            </div>
-            <div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
-              <div class="h-full bg-gradient-to-r from-purple-600 to-pink-500 rounded-full group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all duration-1000 w-[85%] relative"></div>
-            </div>
-          </div>
-
-          <div class="relative">
-            <div class="flex justify-between mb-2">
-              <span class="text-sm font-bold text-slate-700 dark:text-slate-300 flex items-center gap-2"><span class="text-slate-500 text-lg">✉️</span> SOAP / XML</span>
-              <span class="text-sm font-bold text-purple-600 dark:text-purple-400">80%</span>
-            </div>
-            <div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
-              <div class="h-full bg-gradient-to-r from-purple-600 to-pink-500 rounded-full group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all duration-1000 w-[80%] relative"></div>
-            </div>
-          </div>
+      <!-- Data & Queues -->
+      <div class="flex flex-col gap-6" style="flex: 1 1 350px;" appScrollReveal="reveal-right">
+        <h3
+          class="font-mono text-sm tracking-widest text-slate-700 dark:text-slate-300 border-b border-slate-300 dark:border-zinc-700 pb-2">
+          {{ dataService.skills.data.title }}
+        </h3>
+        <div class="flex flex-wrap gap-4 font-mono text-sm text-slate-800 dark:text-slate-200 pt-2">
+          <ng-container *ngFor="let item of dataService.skills.data.items">
+            <span *ngIf="item.name === 'Kafka'"
+              class="border-2 border-slate-900 dark:border-white px-3 py-1.5 font-bold">{{ item.name }}</span>
+            <span *ngIf="item.name !== 'Kafka'"
+              class="border border-slate-200 dark:border-zinc-800 px-3 py-1.5 shadow-sm">{{ item.name }}</span>
+          </ng-container>
         </div>
       </div>
 
       <!-- DevOps & Infrastructure -->
-      <div class="glass-card rounded-3xl p-8 lg:p-10 group" appScrollReveal="reveal-up">
-        <div class="flex items-center gap-4 mb-10">
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-500/20 dark:to-emerald-500/20 flex items-center justify-center border border-green-200 dark:border-green-500/30 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-            <svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-          </div>
-          <h3 class="text-2xl font-bold text-slate-800 dark:text-white">DevOps & Infrastructure</h3>
-        </div>
-
-        <div class="flex flex-wrap gap-3">
-          <span class="px-5 py-2.5 rounded-xl text-sm font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 hover:border-green-500/50 hover:shadow-lg transition-all flex items-center gap-2"><span class="text-blue-500">🐋</span> Docker</span>
-          <span class="px-5 py-2.5 rounded-xl text-sm font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 hover:border-green-500/50 hover:shadow-lg transition-all flex items-center gap-2"><span class="text-red-500">⭕</span> OpenShift</span>
-          <span class="px-5 py-2.5 rounded-xl text-sm font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 hover:border-green-500/50 hover:shadow-lg transition-all flex items-center gap-2"><span class="text-orange-500">🦊</span> GitLab CI/CD</span>
-          <span class="px-5 py-2.5 rounded-xl text-sm font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 hover:border-green-500/50 hover:shadow-lg transition-all flex items-center gap-2"><span class="text-slate-900 dark:text-white">🐙</span> GitHub Actions</span>
-          <span class="px-5 py-2.5 rounded-xl text-sm font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 hover:border-green-500/50 hover:shadow-lg transition-all flex items-center gap-2"><span class="text-red-600">🎩</span> Red Hat Linux</span>
-          <span class="px-5 py-2.5 rounded-xl text-sm font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 hover:border-green-500/50 hover:shadow-lg transition-all flex items-center gap-2"><span class="text-yellow-600">⚡</span> Apache Tomcat</span>
-        </div>
-      </div>
-
-      <!-- Databases & Messaging -->
-      <div class="glass-card rounded-3xl p-8 lg:p-10 group" appScrollReveal="reveal-up">
-        <div class="flex items-center gap-4 mb-10">
-          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-100 to-yellow-100 dark:from-orange-500/20 dark:to-yellow-500/20 flex items-center justify-center border border-orange-200 dark:border-orange-500/30 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-            <svg class="w-8 h-8 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
-          </div>
-          <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Databases & Messaging</h3>
-        </div>
-
-        <div class="flex flex-wrap gap-3">
-          <span class="px-5 py-2.5 rounded-xl text-sm font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-orange-600 dark:hover:text-orange-400 hover:border-orange-500/50 hover:shadow-lg transition-all flex items-center gap-2"><span class="text-red-500">🗄️</span> Oracle Database</span>
-          <span class="px-5 py-2.5 rounded-xl text-sm font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-orange-600 dark:hover:text-orange-400 hover:border-orange-500/50 hover:shadow-lg transition-all flex items-center gap-2"><span class="text-blue-500">🐘</span> PostgreSQL</span>
-          <span class="px-5 py-2.5 rounded-xl text-sm font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-orange-600 dark:hover:text-orange-400 hover:border-orange-500/50 hover:shadow-lg transition-all flex items-center gap-2"><span class="text-cyan-600">🐬</span> MySQL</span>
-          <span class="px-5 py-2.5 rounded-xl text-sm font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-orange-600 dark:hover:text-orange-400 hover:border-orange-500/50 hover:shadow-lg transition-all flex items-center gap-2"><span class="text-zinc-500">📡</span> Apache Kafka</span>
-          <span class="px-5 py-2.5 rounded-xl text-sm font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-orange-600 dark:hover:text-orange-400 hover:border-orange-500/50 hover:shadow-lg transition-all flex items-center gap-2"><span class="text-blue-700">✉️</span> IBM MQ</span>
-          <span class="px-5 py-2.5 rounded-xl text-sm font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:text-orange-600 dark:hover:text-orange-400 hover:border-orange-500/50 hover:shadow-lg transition-all flex items-center gap-2"><span class="text-green-500">🔍</span> Elasticsearch</span>
-        </div>
+      <div class="flex flex-col gap-6 md:mt-8 lg:mt-0" style="flex: 1 1 200px;" appScrollReveal="reveal-up">
+        <h3
+          class="font-mono text-[11px] uppercase tracking-widest text-slate-400 dark:text-zinc-600 border-b-4 border-slate-200 dark:border-zinc-800 pb-1">
+          {{ dataService.skills.devops.title }}
+        </h3>
+        <ul class="text-slate-700 dark:text-slate-300 font-medium space-y-3 font-mono text-sm pt-2 ml-2">
+          <li *ngFor="let item of dataService.skills.devops.items"><span class="text-accent opacity-50 mr-2">+</span> {{item.name }}</li>
+        </ul>
       </div>
 
     </div>
   </div>
 </section>
-
-<!-- Animation Keyframes -->
-<div class="hidden">
-  <style>
-    @keyframes progress {
-      0% { background-position: 1rem 0; }
-      100% { background-position: 0 0; }
-    }
-  </style>
-</div>

@@ -1,0 +1,89 @@
+<div id="resume-template" class="resume hidden-resume">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="left">
+      <h1>{{ data.profile.name }}</h1>
+      <p class="role">{{ data.profile.title }}</p>
+    </div>
+
+    <div class="right">
+      <p>{{ data.profile.email }}</p>
+      <p>{{ data.profile.phone }}</p>
+      <p>{{ data.profile.location }}</p>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section">
+    <h2>Professional Summary</h2>
+    <p>{{ data.profile.summary }}</p>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <h2>Technical Skills</h2>
+    <p><strong>Core Engineering:</strong> {{ getSkills(data.skills.core.items) }}</p>
+    <p><strong>Architecture & APIs:</strong> {{ getSkills(data.skills.architecture.items) }}</p>
+    <p><strong>Data & Messaging:</strong> {{ getSkills(data.skills.data.items) }}</p>
+    <p><strong>DevOps & Infrastructure:</strong> {{ getSkills(data.skills.devops.items) }}</p>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <h2>Professional Experience</h2>
+
+    <div *ngFor="let exp of data.experience" class="block">
+      <div class="row">
+        <strong>{{ exp.role }}</strong>
+        <span>{{ exp.duration }}</span>
+      </div>
+
+      <div class="company">{{ exp.company }}</div>
+
+      <ul>
+        <li *ngFor="let d of exp.details">
+          <strong *ngIf="d.title">{{ d.title }}: </strong>{{ d.description }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <h2>Projects</h2>
+
+    <!-- FEATURED PROJECT -->
+    <div class="block">
+      <div class="row">
+        <strong>{{ data.projects.featured.title }}</strong>
+      </div>
+
+      <ul>
+        <li><strong>Built:</strong> {{ data.projects.featured.solution }}</li>
+        <li><strong>Key Decision:</strong> {{ data.projects.featured.keyDecision }}</li>
+      </ul>
+    </div>
+
+    <!-- SECONDARY PROJECTS -->
+    <div *ngFor="let proj of data.projects.secondary" class="block">
+      <div class="row">
+        <strong>{{ proj.title }}</strong>
+      </div>
+
+      <ul>
+        <li><strong>Built:</strong> {{ proj.solution }}</li>
+        <li><strong>Key Decision:</strong> {{ proj.keyDecision }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ACHIEVEMENTS -->
+  <div class="section">
+    <h2>Key Highlights</h2>
+    <ul>
+      <li *ngFor="let a of data.about.focus">{{ a }}</li>
+    </ul>
+  </div>
+
+</div>

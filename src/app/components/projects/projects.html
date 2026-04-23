@@ -1,125 +1,88 @@
-<section class="py-32 relative bg-slate-50/50 dark:bg-slate-900/50">
+<section class="py-24 md:py-32 relative border-t border-slate-200 dark:border-zinc-800">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
     
-    <div class="mb-20 text-center" appScrollReveal="reveal-up">
-      <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-white tracking-tight">Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-cyan-500 dark:from-purple-400 dark:to-cyan-400">Deployments</span></h2>
-      <div class="w-24 h-1.5 bg-gradient-to-r from-purple-600 to-cyan-500 mt-6 mx-auto rounded-full"></div>
+    <div class="mb-20" appScrollReveal="reveal-up">
+      <h2 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-slate-100 uppercase tracking-tighter">
+        Case <span class="text-accent">Studies.</span>
+      </h2>
     </div>
 
-    <div class="grid grid-cols-1 xl:grid-cols-2 gap-12">
+    <div class="flex flex-col gap-20 md:gap-32">
       
-      <!-- Project 1: Ecommerce Microservice Platform -->
-      <div class="glass-card rounded-3xl overflow-hidden group flex flex-col h-full transform transition duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(6,182,212,0.3)]" appScrollReveal="reveal-left">
-        <!-- Banner Graphic -->
-        <div class="relative h-56 bg-slate-100 dark:bg-slate-800 overflow-hidden border-b border-slate-200 dark:border-white/10">
-          <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 dark:from-cyan-500/20 dark:to-blue-600/20 group-hover:scale-105 transition-transform duration-700"></div>
-          
-          <!-- Mockup UI/Graphic Representation -->
-          <div class="absolute inset-0 flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
-            <div class="w-3/4 h-3/4 rounded-xl border border-white/20 bg-white/40 dark:bg-slate-900/40 backdrop-blur flex items-center justify-center shadow-2xl overflow-hidden relative">
-              <svg class="w-24 h-24 text-cyan-600/50 dark:text-cyan-400/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-            </div>
+      <!-- Featured Project: De-optimized -->
+      <div class="flex flex-col xl:flex-row gap-12 lg:gap-20 items-stretch group" appScrollReveal="reveal-up">
+        
+        <!-- Graphic -->
+        <div class="xl:w-5/12 bg-slate-50 dark:bg-black flex items-center justify-center p-8 lg:p-16 border border-slate-300 dark:border-zinc-800 relative">
+          <!-- Plain text terminal instead of structured card -->
+          <div class="w-full text-left font-mono text-xs text-slate-600 dark:text-zinc-400 whitespace-pre overflow-hidden leading-relaxed">
+[system] initializing enterprise core...
+[system] connecting to postgresql... OK
+[system] establishing grpc tunnel... OK
+[system] starting microservices...
+
+> auth_service     [SECURE]
+> catalog_service  [SYNCED]
+> orders_service   [LISTENING]
+
+<span class="text-accent">>> SYSTEM ONLINE_</span>
           </div>
         </div>
 
-        <div class="p-8 lg:p-10 flex-1 flex flex-col bg-white/50 dark:bg-transparent backdrop-blur-sm">
-          <div class="flex-1">
-            <h3 class="text-2xl font-bold text-slate-800 dark:text-white mb-3">Enterprise E-Commerce Platform</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-[15px] mb-6 leading-relaxed">
-              A highly scalable backend infrastructure driving an e-commerce platform. Designed to handle high-volume distributed transactions safely and efficiently.
-            </p>
-            
-            <ul class="space-y-2 mb-8 text-sm text-slate-700 dark:text-slate-300 list-disc list-inside marker:text-cyan-500">
-              <li>Designed robust microservices architecture using <span class="font-bold">Java & Spring Boot</span>.</li>
-              <li>Implemented high-speed service-to-service communication via <span class="font-bold">gRPC</span>.</li>
-              <li>Engineered a dynamic frontend interface utilizing <span class="font-bold">Angular</span>.</li>
-              <li>Integrated continuous <span class="font-bold">PostgreSQL</span> data synchronization.</li>
-            </ul>
+        <!-- Content -->
+        <div class="xl:w-7/12 flex flex-col justify-center">
+          <div class="text-[11px] font-mono uppercase tracking-widest text-slate-500 dark:text-zinc-500 mb-5 border-l-2 border-accent pl-3">
+            Enterprise Architecture
+          </div>
+          <h3 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-slate-100 mb-10 uppercase tracking-tight">{{ dataService.projects.featured.title }}</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 mb-10 text-sm font-serif">
+            <div>
+              <h4 class="font-sans font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest mb-3 border-b border-slate-200 dark:border-zinc-800 pb-1">Problem</h4>
+              <p class="text-slate-700 dark:text-zinc-300 leading-relaxed">{{ dataService.projects.featured.problem }}</p>
+            </div>
+            <div>
+              <h4 class="font-sans font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest mb-3 border-b border-slate-200 dark:border-zinc-800 pb-1">What I Built</h4>
+              <p class="text-slate-700 dark:text-zinc-300 leading-relaxed">{{ dataService.projects.featured.solution }}</p>
+            </div>
+            <div class="md:col-span-2 bg-slate-100 dark:bg-darkBg p-6 border-l-4 border-slate-900 dark:border-white">
+              <h4 class="font-sans font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest mb-2 flex items-center gap-2">
+                <span class="text-accent">>></span> Key Decision
+              </h4>
+              <p class="text-slate-700 dark:text-zinc-300 italic">"{{ dataService.projects.featured.keyDecision }}"</p>
+            </div>
           </div>
           
-          <div class="mt-auto space-y-6 pt-6 border-t border-slate-200 dark:border-white/10">
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs font-bold text-cyan-700 bg-cyan-100 dark:text-cyan-400 dark:bg-cyan-900/30 border border-cyan-200 dark:border-cyan-500/20 px-3 py-1.5 rounded-full">Spring Boot</span>
-              <span class="text-xs font-bold text-blue-700 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-500/20 px-3 py-1.5 rounded-full">gRPC</span>
-              <span class="text-xs font-bold text-indigo-700 bg-indigo-100 dark:text-indigo-400 dark:bg-indigo-900/30 border border-indigo-200 dark:border-indigo-500/20 px-3 py-1.5 rounded-full">PostgreSQL</span>
-              <span class="text-xs font-bold text-red-700 bg-red-100 dark:text-red-400 dark:bg-red-900/30 border border-red-200 dark:border-red-500/20 px-3 py-1.5 rounded-full">Angular</span>
-            </div>
-
-            <div class="flex gap-4">
-              <a href="#" class="flex-1 text-center py-2.5 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:shadow-lg transition-shadow text-sm flex justify-center items-center gap-2">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
-                View Source
-              </a>
-              <a href="#" class="flex-1 text-center py-2.5 rounded-lg border border-slate-300 dark:border-white/20 text-slate-700 dark:text-slate-300 font-bold hover:bg-slate-100 dark:hover:bg-white/5 transition-colors text-sm flex justify-center items-center gap-2">
-                Live Demo
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-              </a>
-            </div>
+          <div class="flex items-center gap-4 pt-4 border-t border-slate-300 dark:border-zinc-800">
+            <a href="#" class="font-mono text-xs uppercase tracking-widest text-accent hover:text-slate-900 dark:hover:text-white transition-colors flex items-center gap-2 font-bold">
+              Review Source Code <span>→</span>
+            </a>
           </div>
         </div>
       </div>
 
-      <div class="flex flex-col gap-12">
-        <!-- Project 2: Library Management -->
-        <div class="glass-card rounded-3xl overflow-hidden group flex flex-col sm:flex-row h-full transform transition duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(168,85,247,0.3)]" appScrollReveal="reveal-right">
-          <div class="w-full sm:w-2/5 relative bg-slate-100 dark:bg-slate-800 overflow-hidden border-r border-slate-200 dark:border-white/10">
-            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 dark:from-purple-500/20 dark:to-pink-500/20 group-hover:scale-110 transition-transform duration-700"></div>
-            <div class="absolute inset-0 flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
-              <svg class="w-20 h-20 text-purple-600/50 dark:text-purple-400/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-            </div>
-          </div>
-          <div class="p-8 w-full sm:w-3/5 flex flex-col justify-between bg-white/50 dark:bg-transparent backdrop-blur-sm">
+      <!-- Secondary Projects Row (De-boxed) -->
+      <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 mt-8">
+        <div class="lg:w-1/2 flex flex-col" *ngFor="let project of dataService.projects.secondary; let i = index" [ngClass]="{'lg:mt-24 border-t lg:border-t-0 lg:border-l border-dashed border-slate-300 dark:border-zinc-800 pt-16 lg:pt-0 lg:pl-16': i === 1}">
+          <h3 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-slate-100 mb-6 uppercase tracking-tight">{{ project.title }}</h3>
+          
+          <div class="space-y-6 mb-8 text-sm font-serif">
             <div>
-              <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-3">Library Management Core</h3>
-              <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed">
-                Centralized database management system orchestrating users, extensive catalog tracking, and transactional borrowing records securely.
-              </p>
-              <ul class="space-y-1 mb-6 text-sm text-slate-700 dark:text-slate-300 list-disc list-inside marker:text-purple-500">
-                <li>Structured relational databases</li>
-                <li>Complex operational queries</li>
-              </ul>
+              <span class="font-sans font-bold text-slate-500 dark:text-zinc-500 uppercase text-[10px] tracking-widest block mb-1">Problem</span>
+              <p class="text-slate-700 dark:text-zinc-300 leading-relaxed">{{ project.problem }}</p>
             </div>
             <div>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="text-xs font-bold text-gray-700 bg-gray-100 dark:text-gray-300 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-2.5 py-1 rounded-full">SQL</span>
-                <span class="text-xs font-bold text-orange-700 bg-orange-100 dark:text-orange-400 dark:bg-orange-900/30 border border-orange-200 dark:border-orange-500/20 px-2.5 py-1 rounded-full">Java Architecture</span>
-              </div>
-              <a href="#" class="text-purple-600 dark:text-purple-400 font-bold text-sm hover:underline flex items-center gap-1 group-hover:gap-2 transition-all">
-                View Repository <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-              </a>
+              <span class="font-sans font-bold text-slate-500 dark:text-zinc-500 uppercase text-[10px] tracking-widest block mb-1">Built</span>
+              <p class="text-slate-700 dark:text-zinc-300 leading-relaxed">{{ project.solution }}</p>
+            </div>
+            <div class="pt-4 mt-2">
+              <span class="font-sans font-bold text-slate-900 dark:text-white uppercase text-xs tracking-widest border-b border-accent pb-1 block mb-3">Key Decision</span>
+              <p class="text-slate-600 dark:text-zinc-400 italic">"{{ project.keyDecision }}"</p>
             </div>
           </div>
-        </div>
-
-        <!-- Project 3: NLP Point Calculator -->
-        <div class="glass-card rounded-3xl overflow-hidden group flex flex-col sm:flex-row h-full transform transition duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(34,197,94,0.3)]" appScrollReveal="reveal-right">
-          <div class="w-full sm:w-2/5 relative bg-slate-100 dark:bg-slate-800 overflow-hidden border-r border-slate-200 dark:border-white/10">
-            <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-teal-500/10 dark:from-green-500/20 dark:to-teal-500/20 group-hover:scale-110 transition-transform duration-700"></div>
-            <div class="absolute inset-0 flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
-              <svg class="w-20 h-20 text-green-600/50 dark:text-green-400/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-            </div>
-          </div>
-          <div class="p-8 w-full sm:w-3/5 flex flex-col justify-between bg-white/50 dark:bg-transparent backdrop-blur-sm">
-            <div>
-              <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-3">AI Point Calculator</h3>
-              <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed">
-                Automated NLP system to intuitively calculate and assign activity points through raw data analysis and language processing.
-              </p>
-              <ul class="space-y-1 mb-6 text-sm text-slate-700 dark:text-slate-300 list-disc list-inside marker:text-green-500">
-                <li>Machine Learning integrations</li>
-                <li>Advanced Python datasets</li>
-              </ul>
-            </div>
-            <div>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="text-xs font-bold text-green-700 bg-green-100 dark:text-green-400 dark:bg-green-900/30 border border-green-200 dark:border-green-500/20 px-2.5 py-1 rounded-full">Python</span>
-                <span class="text-xs font-bold text-teal-700 bg-teal-100 dark:text-teal-400 dark:bg-teal-900/30 border border-teal-200 dark:border-teal-500/20 px-2.5 py-1 rounded-full">NLP AI</span>
-              </div>
-              <a href="#" class="text-green-600 dark:text-green-400 font-bold text-sm hover:underline flex items-center gap-1 group-hover:gap-2 transition-all">
-                View Repository <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-              </a>
-            </div>
-          </div>
+          <a [href]="project.link" class="font-mono text-xs uppercase tracking-widest text-slate-900 dark:text-white hover:text-accent transition-colors self-start border-b border-slate-300 dark:border-zinc-700 hover:border-accent pb-1 mt-auto">
+            View Source
+          </a>
         </div>
       </div>
 

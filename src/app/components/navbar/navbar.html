@@ -1,31 +1,29 @@
-<nav class="fixed top-0 left-0 w-full z-50 glass border-b border-white/10">
+<nav class="fixed top-0 left-0 w-full z-50 bg-slate-50 dark:bg-darkBg border-b border-slate-300 dark:border-zinc-800">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
     <div class="flex items-center justify-between h-20">
       
       <!-- Logo/Name -->
       <div class="flex-shrink-0 cursor-pointer" (click)="scrollTo('hero')">
-        <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 tracking-tight">
-          Ashif Saheer T
+        <span class="text-2xl font-black text-slate-900 dark:text-slate-100 tracking-tighter uppercase flex items-center gap-2">
+          Ashif Saheer T <span class="text-accent text-3xl leading-none">.</span>
         </span>
       </div>
 
       <!-- Desktop Menu -->
       <div class="hidden md:block">
-        <div class="hidden md:flex items-center space-x-8">
+        <div class="hidden md:flex items-center space-x-8 font-mono text-sm uppercase tracking-widest font-bold">
           <a *ngFor="let item of navItems" 
              (click)="scrollTo(item.link)" 
-             class="cursor-pointer font-bold tracking-wide transition-all duration-300 relative inline-block group"
-             [ngClass]="activeSection === item.link ? 'text-cyan-500 dark:text-cyan-400' : 'text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400'">
+             class="cursor-pointer transition-colors duration-300 border-b-2"
+             [ngClass]="activeSection === item.link ? 'text-accent border-accent' : 'text-slate-500 dark:text-zinc-500 border-transparent hover:text-slate-900 dark:hover:text-slate-100 hover:border-slate-300 dark:hover:border-zinc-700'">
             {{ item.label }}
-            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-500 transition-all duration-300"
-                  [ngClass]="activeSection === item.link ? 'w-full' : 'group-hover:w-full'"></span>
           </a>
         </div>
       </div>
 
       <!-- Mobile menu button -->
       <div class="-mr-2 flex md:hidden">
-        <button type="button" (click)="toggleMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-white/10 focus:outline-none transition-colors">
+        <button type="button" (click)="toggleMenu()" class="inline-flex items-center justify-center p-2 rounded-none text-slate-600 dark:text-zinc-400 hover:text-accent focus:outline-none transition-colors border border-transparent hover:border-accent">
           <span class="sr-only">Open main menu</span>
           <svg *ngIf="!isMenuOpen" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -39,14 +37,14 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div *ngIf="isMenuOpen" class="md:hidden glass border-t border-white/10">
-    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-      <a (click)="scrollTo('hero')" class="cursor-pointer text-slate-300 hover:text-cyan-400 hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-      <a (click)="scrollTo('about')" class="cursor-pointer text-slate-300 hover:text-cyan-400 hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">About</a>
-      <a (click)="scrollTo('skills')" class="cursor-pointer text-slate-300 hover:text-cyan-400 hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">Skills</a>
-      <a (click)="scrollTo('projects')" class="cursor-pointer text-slate-300 hover:text-cyan-400 hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-      <a (click)="scrollTo('experience')" class="cursor-pointer text-slate-300 hover:text-cyan-400 hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">Experience</a>
-      <a (click)="scrollTo('contact')" class="cursor-pointer text-slate-300 hover:text-cyan-400 hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+  <div *ngIf="isMenuOpen" class="md:hidden bg-slate-100 dark:bg-black border-t border-slate-300 dark:border-zinc-800">
+    <div class="px-4 py-6 space-y-4 font-mono text-sm uppercase tracking-widest font-bold">
+      <a (click)="scrollTo('hero')" class="cursor-pointer block text-slate-600 dark:text-zinc-400 hover:text-accent border-b border-slate-300 dark:border-zinc-800 pb-2">Home</a>
+      <a (click)="scrollTo('about')" class="cursor-pointer block text-slate-600 dark:text-zinc-400 hover:text-accent border-b border-slate-300 dark:border-zinc-800 pb-2">About</a>
+      <a (click)="scrollTo('skills')" class="cursor-pointer block text-slate-600 dark:text-zinc-400 hover:text-accent border-b border-slate-300 dark:border-zinc-800 pb-2">Skills</a>
+      <a (click)="scrollTo('projects')" class="cursor-pointer block text-slate-600 dark:text-zinc-400 hover:text-accent border-b border-slate-300 dark:border-zinc-800 pb-2">Projects</a>
+      <a (click)="scrollTo('experience')" class="cursor-pointer block text-slate-600 dark:text-zinc-400 hover:text-accent border-b border-slate-300 dark:border-zinc-800 pb-2">Experience</a>
+      <a (click)="scrollTo('contact')" class="cursor-pointer block text-slate-600 dark:text-zinc-400 hover:text-accent pb-2">Contact</a>
     </div>
   </div>
 </nav>
